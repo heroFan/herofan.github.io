@@ -9,10 +9,16 @@
         <slot></slot>
       </div>
     </div>
-    <div v-if="isShow" class="code--segment">
+    <el-collapse-transition>
+      <div v-if="isShow" class="code--segment">
       <slot name="codeText"></slot>
     </div>
-    <div v-if="$slots.codeText" class="code--button" @click="handleToggleShow">{{codeTextBtn}}</div>
+    </el-collapse-transition>
+    <div v-if="$slots.codeText" class="code--button" @click="handleToggleShow">
+      <i class="el-icon-caret-top" v-show="isShow"></i>
+      <i class="el-icon-caret-bottom" v-show="!isShow"></i>
+      <span>{{codeTextBtn}}</span>
+      </div>
   </div>
 </template>
 
@@ -68,8 +74,9 @@ export default {
     }
   }
   .code--button {
-    background: #fafbfc;
-    color: #409eff;
+    font-size: 14px;
+    background: #ffffff;
+    color: #d3dce6;
     font-weight: 400;
     line-height: 40px;
     text-align: center;
@@ -77,8 +84,16 @@ export default {
     box-shadow: 0 0 8px 0 rgba(232, 237, 250, 0.6),
       0 2px 4px 0 rgba(232, 237, 250, 0.5);
     &:hover {
-      font-size: 17px;
+      color: #409eff;
+      background-color: #f9fafc;
     }
+    // &:hover span {
+    // position: absolute;
+    // transform: translateX(-30px);
+    // line-height: 44px;
+    // transition: .3s;
+    // display: inline-block;
+    // }
   }
 
   & + .code {

@@ -1,12 +1,12 @@
 ---
 home: true
 actionText: 前往 →
-actionLink: /baseComponents/
+actionLink: /component/
 features:
-- title: 布局类组件
-  details: 基本组件，为常用组件提供快速，可用的组件
-- title: 可视化组件
-  details: 积累将数据可视化的业务组件
+- title: 组件
+  details: 记录日常开发中遇到的有趣组件
 - title: 知识库
-  details: 积累前端相关的知识，涵盖 vue、react、koa2、nodejs 相关的知识点
+  details: 积累前端相关的知识
+- title: 可视化
+  details: 积累大数据可视化的实现技术
 ---

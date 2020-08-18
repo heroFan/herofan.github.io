@@ -1,6 +1,6 @@
 {
-  "name": "vue-repos",
-  "version": "1.0.0",
+  "name": "knowledge",
+  "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -8,7 +8,7 @@
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
-    "element-ui": "^2.3.7",
+    "element-ui": "^2.13.1",
     "highlight.js": "^9.12.0",
     "less-loader": "^4.1.0",
     "vue": "^2.5.16",
